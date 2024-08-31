@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString, MinLength } from "class-validator";
+import {  IsNotEmpty, IsString, MinLength } from "class-validator";
 import { User } from "src/core/schema/user.schema";
 
 export class addArticle{
@@ -40,5 +40,10 @@ export class addArticle{
     @IsString()	
     @IsNotEmpty()
     auther:User;
+
+
+    // @IsArray()
+    // @IsNotEmpty()
+    // tagsList:[string]
 
 }

@@ -1,6 +1,7 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import mongoose from "mongoose";
 import { User } from "./user.schema";
+import { Tags } from "./tags.schema";
 
 
 @Schema()
@@ -29,6 +30,9 @@ export class Article{
 
     @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' ,required:true})
     auther: User;
+
+    @Prop({type: mongoose.Schema.Types.ObjectId ,ref: 'Tags', required:true })
+    tagsList:[Tags]
 
 
 

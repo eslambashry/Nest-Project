@@ -4,10 +4,12 @@ import { AppService } from './app.service';
 import { AuthModule } from './modules/auth/auth.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ArticlesModule } from './modules/articles/articles.module';
+import { TagsModule } from './modules/tags/tags.module';
 
 @Module({
   imports: [AuthModule,
     ArticlesModule,
+    TagsModule,
 
     MongooseModule.forRoot('mongodb://localhost/NEST-Project') // ~ The forRoot() method accepts the same configuration object as mongoose.connect() from the Mongoose package, as described here.
 
